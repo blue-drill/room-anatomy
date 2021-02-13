@@ -27,12 +27,27 @@
         <% @quizzes.each do |quiz| %>
           <div class = "col-sm-4">
             <h3><%= quiz.title %></h3>
+            <% if quiz.image.attached? %>
+              <%= image_tag quiz.image %>
+            <% end %>
+            <% if quiz.image_answer.attached? %>
+              <%= image_tag quiz.image_answer %>
+            <% end %>
             <p><%= quiz.sentence %></p>
           </div>
         <% end %>
       </div>
     </div>
   </div>
+</div>
+
+<div class="container quiz-wrapper">
+  <%= form_with model: @quiz, local: true do |form| %>
+    <%= form.text_area :title %>
+    <%= form.file_field :image %>
+    <%= form.file_field :image_answer %>
+    <%= form.submit %>
+  <% end %>
 </div>
 
 
