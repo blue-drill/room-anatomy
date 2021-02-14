@@ -4,6 +4,10 @@ class QuizzesController < ApplicationController
     redirect_to root_url
   end
 
+  def index
+    @quizzes = Quiz.all.limit(9)
+  end
+
   private
     def quiz_params
       params.require(:quiz).permit(:title, :image, :image_answer)
