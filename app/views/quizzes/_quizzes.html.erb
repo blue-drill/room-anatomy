@@ -4,15 +4,8 @@
       <h2>新着の問題一覧</h2>
       <div class = "row">
         <% quizzes.each do |quiz| %>
-          <div class = "col-sm-4">
-            <h3><%= quiz.title %></h3>
-            <% if quiz.quiz_image.attached? %>
-              <%= image_tag quiz.quiz_image %>
-            <% end %>
-            <% if quiz.answer_image.attached? %>
-              <%= image_tag quiz.answer_image %>
-            <% end %>
-            <p><%= quiz.sentence %></p>
+          <div class = "col-sm-4 card bg-light">
+            <%= render 'quizzes/quiz', quiz: quiz %>
           </div>
         <% end %>
       </div>

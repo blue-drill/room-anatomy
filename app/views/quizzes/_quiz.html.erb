@@ -1,0 +1,8 @@
+<% if quiz.quiz_image.attached? %>
+  <%= image_tag quiz.quiz_image, class: 'card-img-top' %>
+<% end %>
+<div class="card-body">
+  <h3 class="card-title"><%= quiz.title %></h3>
+  <p class="card-text"><%= quiz.sentence %></p>
+  <a href="#" class="btn btn-primary">btn</a>
+</div>
