@@ -1,12 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a href="#" class="navbar-brand">ロゴ room-anatomy</a>
-  <div class="navbar-nav">
-    <a href="#">検索</a>
-  </div>
-</nav>
 
 
-<div class="container quiz-menu">
+
+<div class="container-fluid quiz-menu">
   <div class="row">
     <div class="col-sm-12">
       <h1>問題検索フォーム</h1>
@@ -24,8 +19,8 @@
 <div class="container quiz-wrapper">
   <%= form_with model: @quiz, local: true do |form| %>
     <%= form.text_area :title %>
-    <%= form.file_field :image %>
-    <%= form.file_field :image_answer %>
+    <%= form.file_field :quiz_image %>
+    <%= form.file_field :answer_image %>
     <%= form.submit %>
   <% end %>
 </div>
