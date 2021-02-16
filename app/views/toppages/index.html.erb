@@ -1,7 +1,7 @@
 
 
 
-<div class="container-fluid quiz-menu">
+<div class="container-fluid">
   <div class="row">
     <div class="col-sm-12">
       <h1>問題検索フォーム</h1>
@@ -16,7 +16,7 @@
 
 <%= render 'quizzes/quizzes', quizzes: @quizzes %>
 
-<div class="container quiz-wrapper">
+<div class="container bg-dark mt-4">
   <%= form_with model: @quiz, local: true do |form| %>
     <%= form.text_area :title %>
     <%= form.file_field :quiz_image %>
