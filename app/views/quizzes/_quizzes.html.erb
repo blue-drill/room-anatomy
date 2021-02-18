@@ -4,7 +4,7 @@
       <h2>新着の問題一覧</h2>
       <div class = "row justify-content-around">
         <% quizzes.each do |quiz| %>
-          <div class = "col-sm-3 card bg-light">
+          <div class = "col-sm-4 card bg-light">
             <%= render 'quizzes/quiz', quiz: quiz %>
           </div>
         <% end %>
